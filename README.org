@@ -1,0 +1,6 @@
+#+title: OpenBSD 7.2
+
+This branch is in sync with a fresh checkout of =OPENBSD_7_2= from AnonCVS on April  5th, 2023.
+
+Please note that this is not an officially supported mirror - I am merely using this as a base to do
+some kernel hacking.
