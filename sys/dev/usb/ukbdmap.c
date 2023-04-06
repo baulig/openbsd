@@ -1,4 +1,4 @@
-/*	$OpenBSD: ukbdmap.c,v 1.46 2021/05/01 16:11:16 visa Exp $	*/
+/*	$OpenBSD$	*/
 
 /*
  * THIS FILE IS AUTOMAGICALLY GENERATED.  DO NOT EDIT.
@@ -7,7 +7,7 @@
  *	OpenBSD: makemap.awk,v 1.15 2020/11/02 19:45:18 tobhe Exp 
  * generated from:
  */
-/*	OpenBSD: wskbdmap_mfii.c,v 1.46 2019/05/11 14:19:16 abieber Exp  */
+/*	OpenBSD: wskbdmap_mfii.c,v 1.47 2021/05/01 16:11:16 visa Exp  */
 /*	$NetBSD: wskbdmap_mfii.c,v 1.15 2000/05/19 16:40:04 drochner Exp $	*/
 
 /*
@@ -1180,6 +1180,57 @@ static const keysym_t ukbd_keydesc_ee_nodead[] = {
 
 #endif	/* WSKBD_NO_INTL_LAYOUTS */
 
+#if defined(BAULIG)
+
+static const keysym_t ukbd_keydesc_baulig[] = {
+/*  pos      command		normal		shifted */
+    KC(5),	KS_x,
+    KC(6),	KS_j,
+    KC(7),	KS_e,
+    KC(8),	KS_period,	KS_greater,
+    KC(9),	KS_u,
+    KC(10),	KS_i,
+    KC(11),	KS_d,
+    KC(12),	KS_c,
+    KC(13),	KS_h,
+    KC(14),	KS_t,
+    KC(15),	KS_n,
+    KC(17),	KS_b,
+    KC(18),	KS_r,
+    KC(19),	KS_l,
+    KC(20),	KS_apostrophe,	KS_quotedbl,
+    KC(21),	KS_p,
+    KC(22),	KS_o,
+    KC(23),	KS_y,
+    KC(24),	KS_g,
+    KC(25),	KS_k,
+    KC(26),	KS_comma,	KS_less,
+    KC(27),	KS_q,
+    KC(28),	KS_f,
+    KC(29),	KS_semicolon,	KS_colon,
+    KC(30),	KS_dollar,	KS_asciitilde,
+    KC(31),	KS_ampersand,	KS_percent,
+    KC(32),	KS_bracketleft,	KS_7,
+    KC(33),	KS_braceleft,	KS_5,
+    KC(34),	KS_braceright,	KS_3,
+    KC(35),	KS_parenleft,	KS_1,
+    KC(36),	KS_equal,	KS_9,
+    KC(37),	KS_asterisk,	KS_0,
+    KC(38),	KS_parenright,	KS_2,
+    KC(39),	KS_plus,	KS_4,
+    KC(45),	KS_bracketright,KS_6,
+    KC(46),	KS_exclam,	KS_8,
+    KC(47),	KS_slash,	KS_question,
+    KC(48),	KS_equal,	KS_plus,
+    KC(51),	KS_s,
+    KC(52),	KS_minus,	KS_underscore,
+    KC(54),	KS_w,
+    KC(55),	KS_v,
+    KC(56),	KS_z,
+};
+
+#endif // defined(BAULIG)
+
 #define KBD_MAP(name, base, map) \
 			{ name, base, sizeof(map)/sizeof(keysym_t), map }
 
@@ -1246,6 +1297,9 @@ const struct wscons_keydesc ukbd_keydesctab[] = {
 	KBD_MAP(KB_EE,			KB_US,	ukbd_keydesc_ee),
 	KBD_MAP(KB_EE | KB_NODEAD,	KB_EE,	ukbd_keydesc_ee_nodead),
 #endif	/* WSKBD_NO_INTL_LAYOUTS */
+#if defined(BAULIG)
+    KBD_MAP(KB_BAULIG,      KB_BAULIG, ukbd_keydesc_baulig),
+#endif
 	{0, 0, 0, 0}
 };
 
