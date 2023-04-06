@@ -747,6 +747,7 @@
 #define KB_NOENCODING		0x00000080 /* no encodings available */
 #define KB_APPLE		0x00010000 /* Apple specific layout */
 #define KB_COLEMAK		0x02000000 /* Colemak layout */
+#define KB_DVORAK_DVP	0x04000000 /* Programmer Dvorak layout */
 #define KB_DEFAULT		0x80000000 /* (attach-only) default layout */
 
 #define KB_ENCTAB \
@@ -790,6 +791,7 @@
 	{ KB_IOPENER,	"iopener" }, \
 	{ KB_NOENCODING, "noencoding" }, \
 	{ KB_APPLE,	"apple" }, \
-	{ KB_COLEMAK,	"colemak" }
+	{ KB_COLEMAK,	"colemak" }, \
+	{ KB_DVORAK_DVP, "programmer-dvorak" }
 
 #endif /* !_DEV_WSCONS_WSKSYMDEF_H_ */

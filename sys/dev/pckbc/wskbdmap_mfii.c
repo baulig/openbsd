@@ -1128,6 +1128,54 @@ static const keysym_t pckbd_keydesc_ee_nodead[] = {
 
 #endif	/* WSKBD_NO_INTL_LAYOUTS */
 
+static const keysym_t pckbd_keydesc_us_dvorak_dvp[] = {
+/*  pos      command		normal		shifted */
+    KC(2),			KS_ampersand,	KS_percent,
+    KC(3),			KS_bracketleft,	KS_7,
+    KC(4),			KS_braceleft,	KS_5,
+    KC(5),			KS_braceright,	KS_3,
+    KC(6),			KS_parenleft,	KS_1,
+    KC(7),			KS_equal,	KS_9,
+    KC(8),			KS_asterisk,	KS_0,
+    KC(9),			KS_parenright,	KS_2,
+    KC(10),			KS_plus,	KS_4,
+    KC(11),			KS_bracketright,KS_6,
+    KC(12),			KS_exclam,      KS_8,
+    KC(13),			KS_numbersign,	KS_grave,
+    KC(16),			KS_semicolon,	KS_colon,
+    KC(17),			KS_comma,	KS_less,
+    KC(18),			KS_period,	KS_greater,
+    KC(19),			KS_p,
+    KC(20),			KS_y,
+    KC(21),			KS_f,
+    KC(22),			KS_g,
+    KC(23),			KS_c,
+    KC(24),			KS_r,
+    KC(25),			KS_l,
+    KC(26),			KS_slash,	KS_question,
+    KC(27),			KS_at,		KS_asciicircum,
+    KC(31),			KS_o,
+    KC(32),			KS_e,
+    KC(33),			KS_u,
+    KC(34),			KS_i,
+    KC(35),			KS_d,
+    KC(36),			KS_h,
+    KC(37),			KS_t,
+    KC(38),			KS_n,
+    KC(39),			KS_s,
+    KC(40),			KS_minus,	KS_underscore,
+    KC(41),			KS_dollar,	KS_asciitilde,
+    KC(44),			KS_apostrophe,	KS_quotedbl,
+    KC(45),			KS_q,
+    KC(46),			KS_j,
+    KC(47),			KS_k,
+    KC(48),			KS_x,
+    KC(49),			KS_b,
+    KC(51),			KS_w,
+    KC(52),			KS_v,
+    KC(53),			KS_z,
+};
+
 #define KBD_MAP(name, base, map) \
 			{ name, base, sizeof(map)/sizeof(keysym_t), map }
 
@@ -1150,6 +1198,7 @@ const struct wscons_keydesc pckbd_keydesctab[] = {
 	KBD_MAP(KB_US | KB_DECLK,	KB_US,	pckbd_keydesc_us_declk),
 	KBD_MAP(KB_US | KB_DVORAK,	KB_US,	pckbd_keydesc_us_dvorak),
 	KBD_MAP(KB_US | KB_COLEMAK,	KB_US,	pckbd_keydesc_us_colemak),
+	KBD_MAP(KB_US | KB_DVORAK_DVP,	KB_US,	pckbd_keydesc_us_dvorak_dvp),
 	KBD_MAP(KB_US | KB_SWAPCTRLCAPS, KB_US,	pckbd_keydesc_swapctrlcaps),
 	KBD_MAP(KB_US | KB_IOPENER,	KB_US,	pckbd_keydesc_iopener),
 	KBD_MAP(KB_UK | KB_SWAPCTRLCAPS, KB_UK,	pckbd_keydesc_swapctrlcaps),
