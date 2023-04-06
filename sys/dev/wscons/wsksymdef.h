@@ -737,8 +737,6 @@
 #define KB_IS			0x1c00
 #define KB_EE			0x1d00
 
-#define KB_BAULIG       0x1e00
-
 #define KB_NODEAD		0x00000001 /* disable dead accents */
 #define KB_DECLK		0x00000002 /* DEC LKnnn layout */
 #define KB_LK401		0x00000004 /* DEC LK401 instead LK201 */
@@ -749,6 +747,7 @@
 #define KB_NOENCODING		0x00000080 /* no encodings available */
 #define KB_APPLE		0x00010000 /* Apple specific layout */
 #define KB_COLEMAK		0x02000000 /* Colemak layout */
+#define KB_DVORAK_DVP	0x04000000 /* Programmer Dvorak layout */
 #define KB_DEFAULT		0x80000000 /* (attach-only) default layout */
 
 #define KB_ENCTAB \
@@ -780,8 +779,7 @@
 	{ KB_CF,	"cf" }, \
 	{ KB_LV,	"lv" }, \
 	{ KB_IS,	"is" }, \
-	{ KB_EE,	"ee" }, \
-	{ KB_BAULIG,"baulig" }
+	{ KB_EE,	"ee" }
 
 #define KB_VARTAB \
 	{ KB_NODEAD,	"nodead" }, \
@@ -793,6 +791,7 @@
 	{ KB_IOPENER,	"iopener" }, \
 	{ KB_NOENCODING, "noencoding" }, \
 	{ KB_APPLE,	"apple" }, \
-	{ KB_COLEMAK,	"colemak" }
+	{ KB_COLEMAK,	"colemak" }, \
+	{ KB_DVORAK_DVP, "programmer-dvorak" }
 
 #endif /* !_DEV_WSCONS_WSKSYMDEF_H_ */
