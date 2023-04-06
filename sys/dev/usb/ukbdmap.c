@@ -1180,8 +1180,6 @@ static const keysym_t ukbd_keydesc_ee_nodead[] = {
 
 #endif	/* WSKBD_NO_INTL_LAYOUTS */
 
-#if defined(BAULIG)
-
 static const keysym_t ukbd_keydesc_baulig[] = {
 /*  pos      command		normal		shifted */
     KC(5),	KS_x,
@@ -1228,8 +1226,6 @@ static const keysym_t ukbd_keydesc_baulig[] = {
     KC(55),	KS_v,
     KC(56),	KS_z,
 };
-
-#endif // defined(BAULIG)
 
 #define KBD_MAP(name, base, map) \
 			{ name, base, sizeof(map)/sizeof(keysym_t), map }
@@ -1297,9 +1293,7 @@ const struct wscons_keydesc ukbd_keydesctab[] = {
 	KBD_MAP(KB_EE,			KB_US,	ukbd_keydesc_ee),
 	KBD_MAP(KB_EE | KB_NODEAD,	KB_EE,	ukbd_keydesc_ee_nodead),
 #endif	/* WSKBD_NO_INTL_LAYOUTS */
-#if defined(BAULIG)
-    KBD_MAP(KB_BAULIG,      KB_BAULIG, ukbd_keydesc_baulig),
-#endif
+    KBD_MAP(KB_BAULIG,      KB_US, ukbd_keydesc_baulig),
 	{0, 0, 0, 0}
 };
 
