@@ -1176,6 +1176,29 @@ static const keysym_t pckbd_keydesc_us_dvorak_dvp[] = {
     KC(53),			KS_z,
 };
 
+static const keysym_t pckbd_keydesc_baulig[] = {
+/*  pos      command		normal		shifted */
+    KC(2),			KS_1,		KS_exclam,
+    KC(3),			KS_2,		KS_at,
+    KC(4),			KS_3,		KS_numbersign,
+    KC(5),			KS_4,		KS_dollar,
+    KC(6),			KS_5,		KS_percent,
+
+    KC(7),			KS_6,		KS_asciicircum,
+    KC(8),			KS_7,		KS_ampersand,
+    KC(9),			KS_8,		KS_asterisk,
+    KC(10),			KS_9,		KS_parenleft,
+    KC(11),			KS_0,		KS_parenright,
+    KC(12),			KS_minus,	KS_underscore,
+    KC(13),			KS_equal,	KS_plus,
+
+    KC(18),			KS_e,
+    KC(26),			KS_bracketleft,	KS_braceleft,
+    KC(27),			KS_bracketright,KS_braceright,
+    KC(40),			KS_apostrophe,	KS_quotedbl,
+    KC(41),			KS_grave,	KS_asciitilde,
+};
+
 #define KBD_MAP(name, base, map) \
 			{ name, base, sizeof(map)/sizeof(keysym_t), map }
 
@@ -1239,6 +1262,7 @@ const struct wscons_keydesc pckbd_keydesctab[] = {
 	KBD_MAP(KB_IS | KB_NODEAD,	KB_IS, 	pckbd_keydesc_is_nodead),
 	KBD_MAP(KB_EE,			KB_US,	pckbd_keydesc_ee),
 	KBD_MAP(KB_EE | KB_NODEAD,	KB_EE,	pckbd_keydesc_ee_nodead),
+	KBD_MAP(KB_BAULIG,		KB_US,	pckbd_keydesc_baulig),
 #endif	/* WSKBD_NO_INTL_LAYOUTS */
 	{0, 0, 0, 0}
 };

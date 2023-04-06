@@ -737,6 +737,8 @@
 #define KB_IS			0x1c00
 #define KB_EE			0x1d00
 
+#define KB_BAULIG		0x1f00
+
 #define KB_NODEAD		0x00000001 /* disable dead accents */
 #define KB_DECLK		0x00000002 /* DEC LKnnn layout */
 #define KB_LK401		0x00000004 /* DEC LK401 instead LK201 */
@@ -779,7 +781,8 @@
 	{ KB_CF,	"cf" }, \
 	{ KB_LV,	"lv" }, \
 	{ KB_IS,	"is" }, \
-	{ KB_EE,	"ee" }
+	{ KB_EE,	"ee" }, \
+	{ KB_BAULIG,	"baulig" }
 
 #define KB_VARTAB \
 	{ KB_NODEAD,	"nodead" }, \
